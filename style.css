@@ -618,7 +618,7 @@ input[type="number"] {
 .note-card {
   width: 15rem;
   height: 10rem;
-  background-color: var(--pink);
+  background-color: var(--yellow);
   overflow: auto;
   border-radius: 5px;
   cursor: pointer;
@@ -628,7 +628,8 @@ input[type="number"] {
   resize: both;
   right: 3rem;
   top: 5rem;
-
+  color: var(--blue);
+  font-weight: var(--weight-700);
   border-top: 1rem ridge var(--green);
 }
 
