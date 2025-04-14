@@ -105,7 +105,7 @@ h1 {
 }
 
 h1 span {
-  font-size: var(--font-200);
+  font-size: var(--font-400);
   font-weight: var(--weight-700);
 }
 
@@ -334,7 +334,7 @@ body:has(.primary-card-wrapper) {
   gap: var(--header-gap);
   /* padding-top: 2rem; */
   min-height: 100vh;
-  margin-inline: 2rem;
+  /* margin-inline: 2rem; */
 }
 
 .card-content h2 {
