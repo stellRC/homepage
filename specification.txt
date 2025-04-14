@@ -1,0 +1,56 @@
+HTML Tags
+
+h1
+h2
+h3
+nav
+ul
+li
+a
+main
+aside
+input
+label
+figure
+figcaption
+svg
+path
+section
+div
+img
+p
+footer
+small
+
+CSS Properties
+
+opacity
+transition
+width
+transform
+background-color
+outline
+box-shadow
+flex-direction
+position
+animation
+etc.
+
+Bootstrap and CSS
+I used bootstrap to build the slider toggles on the accessibility menu. I also used bootstrap padding here and there. This was my second time building 
+this site. The first time I used mostly bootstrap and while it functioned I definitely felt less control over styling and functionality. Even with my simple reset,
+I had to use !important a fair number of times. I generally avoid this, but found that the bootstrap styling was nullifying my reset and I couldn't think of an easier solution.
+
+I've tried out various CSS frameworks, but usually find that CSS sans framework constraints works best.
+
+If I had more time to refactor, I would work on responsiveness so I don't use quite so many media queries. I would also slim down the root variables so I don't repeat so much code. 
+
+
+
+JS
+
+This was my first time changing root variables via toggling classes in JS. This is really useful, as it doesn't rely on applying separate classes to specific elements.
+I also used JS to move the note-card about the screen and print out on the screen that it has been focused on. Finally, I dynamically change the images based on the slider 
+value as changed via the range slider. 
+
+If I had more time, I would ensure that if the draggable note-card is focused on via tab, you could then use the arrow keys or AWSD to move it around the screen.

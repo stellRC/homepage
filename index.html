@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Merienda:wght@300..900&family=Princess+Sofia&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Personal -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="accessibility.js" defer></script>
+    <title>Accessibility Tidbits || User Preference</title>
+  </head>
+
+  <body class="flex">
+    <div class="primary-card-wrapper" id="tilt-card">
+      <header class="primary-header flex">
+        <!-- column reverse -->
+        <h1>Tidbits on <br class="break" /><span> User Preference</span></h1>
+        <nav class="primary-nav">
+          <ul class="nav-list flex">
+            <li>
+              <a class="link-background" href="hover.html">Hover & Animation</a>
+            </li>
+            <li>
+              <a class="link-background" href="filters.html">Filters</a>
+            </li>
+            <li>
+              <a class="link-background" href="post.html">Drag & Drop</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="flex">
+        <section class="card-content flex">
+          <header>
+            <h2>Designed Just For You</h2>
+            <div class="mask-animation"></div>
+          </header>
+          <div>
+            <p>
+              Everyone should have equal access to the web. Making it responsive
+              and usable is an important aspect to web design. Here you can
+              experiment with various user preferences such as changing the
+              color scheme from dark to light, adding additional spacing to the
+              text and line height, as well as changing to a dyslexia friendly
+              font.
+            </p>
+          </div>
+        </section>
+        <aside>
+          <h3>Accessibility Modes</h3>
+          <nav>
+            <ul class="flex accessability-list">
+              <li class="form-check form-switch toggle-wrapper flex">
+                <label class="form-check-label" for="font">Font Family</label>
+                <input
+                  class="form-check-input toggle toggle-aria"
+                  type="checkbox"
+                  role="switch"
+                  aria-checked="false"
+                  id="font"
+                  onclick="font(this.value)"
+                />
+              </li>
+              <li class="form-check form-switch toggle-wrapper flex">
+                <label class="form-check-label" for="space">Text Spacing</label>
+                <input
+                  class="form-check-input toggle toggle-aria"
+                  type="checkbox"
+                  aria-checked="false"
+                  role="switch"
+                  id="space"
+                  onclick="space(this.value)"
+                />
+              </li>
+              <li class="form-check form-switch toggle-wrapper flex">
+                <label class="form-check-label" for="color">Color Scheme</label>
+                <input
+                  class="form-check-input toggle toggle-aria"
+                  type="checkbox"
+                  aria-checked="false"
+                  role="switch"
+                  id="color"
+                  onclick="color(this.value)"
+                />
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <div class="primary-image background-image"></div>
+      </main>
+      <footer class="primary-footer">
+        <small
+          >Designed by
+          <a href="https://github.com/stellRC" class="link-background"
+            >StellRC</a
+          ></small
+        >
+      </footer>
+    </div>
+  </body>
+</html>
+
+<!-- One large Card that can turn -->

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Merienda:wght@300..900&family=Princess+Sofia&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Personal -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="accessibility.js" defer></script>
+    <title>Accessibility Tidbits || Hover & Animation</title>
+  </head>
+  <body>
+    <header class="primary-header flex">
+      <!-- column reverse -->
+      <h1>Tidbits on <br /><span> Hover & Animation</span></h1>
+      <nav class="primary-nav">
+        <ul class="nav-list flex">
+          <li>
+            <a class="link-background" href="index.html">User Preference</a>
+          </li>
+          <li>
+            <a class="link-background" href="filters.html">Filters</a>
+          </li>
+          <li>
+            <a class="link-background" href="post.html">Drag & Drop</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="hover-content" id="hover">
+      <section class="description-text-content">
+        <header><h2>Hover to Learn More!</h2></header>
+        <p>
+          These 3d cards may appear nice on first glance, but were they the best
+          choice for the job?
+        </p>
+
+        <div class="form-check form-switch toggle-wrapper flex hover-toggle">
+          <label class="form-check-label" for="hover-input">Hover/Show</label>
+          <input
+            class="form-check-input toggle toggle-aria"
+            type="checkbox"
+            role="switch"
+            aria-checked="false"
+            name="hover"
+            id="hover-input"
+            onclick="hover(this.value)"
+          />
+        </div>
+      </section>
+      <section class="grid-container">
+        <ul class="grid grid-wrapper">
+          <li class="card-wrapper">
+            <figure class="grid-card pixel-rain background-image flex">
+              <figcaption class="face face-content">
+                <h3>Animated Rain</h3>
+                <p>
+                  When designing a site, it is important to keep in mind that
+                  even though you get a kick out of animation, your users might
+                  prefer reduced motion. The prefer reduced motion media query
+                  is helpful in this case.
+                </p>
+              </figcaption>
+
+              <div class="pixel-rain background-image grid-card-image"></div>
+            </figure>
+          </li>
+          <li class="card-wrapper">
+            <figure
+              class="grid-card plain background-image flex"
+              id="info-card"
+            >
+              <figcaption class="face face-content">
+                <h3>Raindrops</h3>
+                <p>
+                  Color contrast is important if you wan't everyone to be able
+                  to appreciate your design choices.
+                </p>
+              </figcaption>
+              <div class="flex">
+                <svg
+                  width="30%"
+                  viewbox="0 0 30 42"
+                  name="raindrop"
+                  role="img"
+                  aria-label="raindrop hover card"
+                  alt="raindrop"
+                >
+                  <path
+                    fill="transparent"
+                    stroke="#000"
+                    stroke-width="1"
+                    d="M15 3
+                                         Q16.5 6.8 25 18
+                                         A12.8 12.8 0 1 1 5 18
+                                         Q13.5 6.8 15 3z"
+                  />
+                </svg>
+                <svg
+                  width="20%"
+                  viewbox="0 0 30 42"
+                  name="raindrop"
+                  role="img"
+                  aria-label="raindrop hover card"
+                  alt="raindrop"
+                >
+                  <path
+                    fill="transparent"
+                    stroke="#000"
+                    stroke-width="2.5"
+                    d="M15 3
+                                         Q16.5 6.8 25 18
+                                         A12.8 12.8 0 1 1 5 18
+                                         Q13.5 6.8 15 3z"
+                  />
+                </svg>
+                <svg
+                  width="15%"
+                  viewbox="0 0 30 42"
+                  name="raindrop"
+                  role="img"
+                  aria-label="raindrop hover card"
+                  alt="raindrop"
+                >
+                  <path
+                    fill="transparent"
+                    stroke="#000"
+                    stroke-width="1.5"
+                    d="M15 3
+                                         Q16.5 6.8 25 18
+                                         A12.8 12.8 0 1 1 5 18
+                                         Q13.5 6.8 15 3z"
+                  />
+                </svg>
+              </div>
+            </figure>
+          </li>
+          <li class="card-wrapper">
+            <figure class="grid-card still-rain background-image flex">
+              <figcaption class="face face-content">
+                <h3>Still Rain</h3>
+                <p>
+                  Hovering is one of the basic functions in web design. However,
+                  important information or controls is often hidden behind
+                  hovering and is incredibly difficult to access for technology
+                  such as voice dictation. Having a toggle for clicking rather
+                  than hovering or abstaining from hiding important features
+                  could prove immensely helpful.
+                </p>
+              </figcaption>
+
+              <div class="still-rain background-image grid-card-image"></div>
+            </figure>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="primary-footer">
+      <div class="primary-image background-image"></div>
+      <small
+        >Designed by
+        <a href="https://github.com/stellRC" class="link-background"
+          >StellRC</a
+        ></small
+      >
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Merienda:wght@300..900&family=Princess+Sofia&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Personal -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="note-card.js" defer></script>
+    <title>Accessibility Tidbits || Drag & Drop</title>
+  </head>
+
+  <body>
+    <header class="primary-header flex">
+      <!-- column reverse -->
+      <h1>Tidbits on <br /><span> Drag & Drop</span></h1>
+      <nav class="primary-nav">
+        <ul class="nav-list flex">
+          <li>
+            <a class="link-background" href="index.html">User Preference</a>
+          </li>
+          <li>
+            <a class="link-background" href="hover.html">Hover & Animation</a>
+          </li>
+          <li>
+            <a class="link-background" href="filters.html">Filters</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="description-text-content">
+        <header>
+          <h2>Or Use Your Keyboard!</h2>
+        </header>
+        <div>
+          <p>
+            For non-mouse users, having the ability to navigate via keyboard is
+            an important accessibility feature. Drag the note card OR use tab to
+            focus on it. Once focused, use AWSD to move it around the screen.
+          </p>
+          <div class="flex counter-wrapper">
+            <label for="move-counter"
+              >How fast should the object move across the screen via
+              keyboard?</label
+            >
+            <input
+              type="number"
+              name="move-counter"
+              id="move-counter"
+              placeholder="1"
+              width="10"
+              onchange="moveCounter(this.value)"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="post-main">
+        <div class="note-container">
+          <div class="note-card" tabindex="0" aria-live="polite">
+            <img
+              class="pushpin"
+              src="pushpin.png"
+              alt="note-card pushpin, not user interactive"
+            />
+            <p>Drag, resize, or focus on me!</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="primary-footer">
+      <div class="primary-image background-image header-image"></div>
+      <small
+        >Designed by
+        <a href="https://github.com/stellRC" class="link-background"
+          >StellRC</a
+        ></small
+      >
+    </footer>
+  </body>
+</html>
