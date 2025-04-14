@@ -196,8 +196,6 @@ button {
   background-color: inherit;
   border-radius: 5px;
 
-  letter-spacing: 0.04em;
-
   color: var(--link-color);
 }
 
@@ -343,7 +341,7 @@ body:has(.primary-card-wrapper) {
 }
 
 .primary-image {
-  background-image: url("creeper-letter.png");
+  background-image: url("/img/creeper-letter.png");
   width: 30%;
   min-height: 60vh;
   order: 3;
@@ -522,6 +520,12 @@ input[type="number"] {
   margin: 1rem;
 }
 
+/* Always show arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
 ::placeholder {
   color: var(--yellow);
   opacity: 1;
@@ -632,7 +636,11 @@ hgroup {
   position: fixed;
   /* user-select: none; */
   text-align: center;
+
   resize: both;
+  max-width: 20rem;
+  max-height: 15rem;
+
   right: 3rem;
   top: 5rem;
   color: var(--blue);
@@ -640,7 +648,7 @@ hgroup {
   border-top: 1rem ridge var(--green);
 }
 
-.note-card p {
+.note-card span {
   user-select: none;
 }
 
@@ -757,14 +765,10 @@ hgroup {
     gap: 2rem;
   }
 
-  .link-background {
-    padding: 0.5rem 1rem;
-  }
-
   /* Animation for home page */
   .mask-animation {
     width: 12vmin;
-    height: 75vmin;
+    height: 70vmin;
     background-color: var(--text-color);
     transform: rotateZ(-90deg);
     transform-origin: left top;
@@ -840,6 +844,10 @@ hgroup {
 
   .toggle {
     width: 3.5em !important;
+  }
+
+  .mask-animation {
+    width: 10.5vmin;
   }
 
   .primary-nav .nav-list {

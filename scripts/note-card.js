@@ -46,7 +46,16 @@ function mouseUp(e) {
 card.addEventListener("keyup", (e) => {
   // Check if focused
 
-  if (e.key == "a" || e.key == "w" || e.key == "d" || e.key == "s") {
+  if (
+    e.key == "a" ||
+    e.key == "w" ||
+    e.key == "d" ||
+    e.key == "s" ||
+    e.key == "ArrowRight" ||
+    e.key == "ArrowLeft" ||
+    e.key == "ArrowUp" ||
+    e.key == "ArrowDown"
+  ) {
     registerKey(e);
   }
 });
@@ -60,16 +69,27 @@ function registerKey(e) {
   switch (e.key) {
     case "a":
       e.target.style.left = e.target.offsetLeft - moveStep + "px";
-
+      break;
+    case "ArrowLeft":
+      e.target.style.left = e.target.offsetLeft - moveStep + "px";
       break;
     case "d":
-      e.target.style.left = e.target.offsetLeft - -moveStep + "px";
+      e.target.style.left = e.target.offsetLeft + moveStep + "px";
+      break;
+    case "ArrowRight":
+      e.target.style.left = e.target.offsetLeft + moveStep + "px";
       break;
     case "w":
       e.target.style.top = e.target.offsetTop - moveStep + "px";
       break;
+    case "ArrowUp":
+      e.target.style.top = e.target.offsetTop - moveStep + "px";
+      break;
     case "s":
-      e.target.style.top = e.target.offsetTop - -moveStep + "px";
+      e.target.style.top = e.target.offsetTop + moveStep + "px";
+      break;
+    case "ArrowDown":
+      e.target.style.top = e.target.offsetTop + moveStep + "px";
       break;
   }
 }

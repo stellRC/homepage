@@ -24,9 +24,9 @@
       rel="stylesheet"
     />
     <!-- Personal -->
-    <link rel="stylesheet" href="style.css" />
-    <script src="note-card.js" defer></script>
-    <title>Accessibility Tidbits || Drag & Drop</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/note-card.js" defer></script>
+    <title>Accessibility Tidbits | Drag & Drop</title>
   </head>
 
   <body>
@@ -56,7 +56,7 @@
           <p>
             For non-mouse users, having the ability to navigate via keyboard is
             an important accessibility feature. Drag the note card OR use tab to
-            focus on it. Once focused, use AWSD to move it around the screen.
+            focus on it. Once focused, use WASD to move it around the screen.
           </p>
           <div class="flex counter-wrapper">
             <label for="move-counter"
@@ -68,6 +68,7 @@
               name="move-counter"
               id="move-counter"
               placeholder="1"
+              min="1"
               width="10"
               onchange="moveCounter(this.value)"
             />
@@ -79,7 +80,7 @@
           <div class="note-card" tabindex="0" aria-live="polite">
             <img
               class="pushpin"
-              src="pushpin.png"
+              src="img/pushpin.png"
               alt="note-card pushpin, not user interactive"
             />
             <span data-alt="">
