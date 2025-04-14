@@ -683,6 +683,22 @@ hgroup {
   }
 }
 
+/* Note card remains unmovable in mobile */
+@media screen and (max-width: 35em) {
+  .note-card {
+    position: static;
+    margin: 2rem;
+  }
+
+  [data-alt] > span {
+    display: none;
+  }
+
+  [data-alt]::before {
+    content: attr(data-alt);
+  }
+}
+
 @media screen and (max-width: 60em) {
   .primary-card-wrapper {
     margin-block: 2rem;
@@ -728,6 +744,9 @@ hgroup {
 @media screen and (min-width: 40em) {
   .primary-card-wrapper aside {
     width: 100%;
+  }
+  #note-text {
+    background-color: var(--pink);
   }
 
   .toggle-wrapper {
@@ -823,9 +842,6 @@ hgroup {
     width: 3.5em !important;
   }
 
-  /* .grid-card {
-    aspect-ratio: 9 / 16;
-  } */
   .primary-nav .nav-list {
     flex-direction: row;
   }
@@ -851,10 +867,6 @@ hgroup {
   .toggle-wrapper {
     justify-content: space-between;
   }
-
-  /* .grid-card {
-    aspect-ratio: 16 / 16;
-  } */
 
   .primary-header h1 {
     padding-top: 2rem;
